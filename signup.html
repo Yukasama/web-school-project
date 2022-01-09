@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Oblivion | Multi-Blockchain Infrastructure</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="png" href="img/Pageicon_1.png">
+    <script src="https://kit.fontawesome.com/04b8e834da.js" crossorigin="anonymous"></script>
+</head>
+<body class="body_login">
+
+    <!-- NAVBAR -->
+    <div class="navbar flex">
+        <div class="nav_container flex">
+            <img class="nav_img" src="img/Pageicon_1.png">
+            <p class="nav_header">Oblivion</p>
+        </div>
+        <div class="nav_container nav_container_2 flex">
+            <a href="index.html" class="nav_item">Home</a>
+            <a href="projects.html" class="nav_item">Projects</a>
+            <a class="nav_item" id="contact">Contact</a>
+        </div>
+        <div class="nav_container flex">
+            <a href="login.html" class="smart_button nav_button">Login</a>
+            <i class="material-icons nav_icon">dark_mode</i>
+            <div class="hamburger">
+                <div class="hamburger_line"></div>
+                <div class="hamburger_line"></div>
+                <div class="hamburger_line"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CONTACT -->
+    <div class="contact flex">
+        <div class="contact_page contact_page1 flex">
+            <div class="circle circle1"></div>
+            <div class="contacting flex">
+                <i class="material-icons contact_icon">location_on</i>
+                <div class="info_contact">
+                    <p class="contact_header">Address</p>
+                    <p class="contact_text">Funny Street</p>
+                    <p class="contact_text">Chicago, Illinois</p>
+                    <p class="contact_text">60007</p>
+                </div>
+            </div>
+            <div class="contacting flex">
+                <i class="material-icons contact_icon">local_phone</i>
+                <div class="info_contact">
+                    <p class="contact_header">Phone</p>
+                    <p class="contact_text">+49 911 420 69</p>
+                </div>
+            </div>
+            <div class="contacting flex">
+                <i class="material-icons contact_icon">mail</i>
+                <div class="info_contact">
+                    <p class="contact_header">E-Mail</p>
+                    <p class="contact_text">oblivion@gmail</p>
+                    <p class="contact_text">.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact_page contact_page2 flex">
+            <div class="circle circle2"></div>
+            <div class="hamburger hamburger_2">
+                <div class="hamburger_line hamburger_line2"></div>
+                <div class="hamburger_line hamburger_line2"></div>
+                <div class="hamburger_line hamburger_line2"></div>
+            </div>
+            <p class="contact_header">Let's talk!</p>
+            <div class="contactInfo flex">            
+                <div class="contactBox">
+                    <input type="text" name="" required="required">
+                    <span>First Name</span>
+                </div>
+                <div class="contactBox">
+                    <input type="text" name="name" required="required">
+                    <span>Last Name</span>
+                </div>
+            </div>
+            <div class="contactBox">
+                <input type="email" name="email" required="required">
+                <span>E-Mail</span>
+            </div>
+            <div class="contactBox">
+                <textarea type="text" value="message" required="required"></textarea>
+                <span>Enter your Message...</span>
+            </div>
+            <div class="smart_button contact_button" type="submit">Submit</div>
+        </div>
+    </div>
+
+        <!-- SIGNUP -->
+        <img class="login" src="img/Background_6.jpg">
+        <div class="login_form">
+            <div class="signin">
+                <form action="" class="signin_form">
+                    <h2 class="title">Create Account</h2>
+                    <div class="input">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="E-mail">
+                    </div>
+                    <div class="input">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="input">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password">
+                    </div>
+                    <a href="troll.html" class="login_button">Sign Up</a>
+
+                    <p class="social_text"> Or Sign up with</p>
+                    <div class="social_media">
+                        <a href="#" class="social_icon social_icon_1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social_icon social_icon_2">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social_icon social_icon_3">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social_icon social_icon_4">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <a href="login.html" class="create_account">Already a member? <span class="create">Sign in.</span></a>
+                </form>
+            </div>
+        </div>
+
+    <!-- JAVASCRIPT -->    
+    <script src="js/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".products_image"), {
+            max: 25,
+            speed: 400,
+            scale: 1.07,
+        });
+    </script>  
+    <script src="js/edited.js"></script>
+    <script>
+        //IMAGE SCROLLING
+        const slideOptions = {
+            threshhold: 0,
+            rootMargin: "0px 0px -300px 0px"
+        };
+        const products_box = document.querySelectorAll(".products_box");
+        const slideOnScroll = new IntersectionObserver(function(
+            entries,
+            slideOnScroll
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+                else {
+                    entry.target.classList.add("slide");
+                    slideOnScroll.unobserve(entry.target);
+                }
+            })
+        
+        }, slideOptions);
+    
+        products_box.forEach(products => {
+            slideOnScroll.observe(products);
+        });
+    </script>
+</body>
+</html>
